@@ -1,0 +1,5 @@
+<template name="8b1809c4"><view class="_div M8b1809c4"><view wx:if="{{drag}}" class="_div M8b1809c4 wrap tab-bar-scroll"><scroller class="_scroller M8b1809c4 scroll" scrollDirection="horizontal" showScrollbar="false"><view class="_div M8b1809c4 tab-bar-item tab-bar-scroll-width" wx:key="t" key="{{t}}" ref="{{tabBar.id + t}}" bindtap="handleProxy" data-eventid="{{'8b1809c4-0-'+t}}" data-comkey="{{$k}}" wx:for="{{tabBars}}" wx:for-index="t" wx:for-item="tabBar"><text class="_text M8b1809c4 tab-bar-title {{[tabIndex === t ? 'active' : '']}}">{{
+					tabBar.name
+				}}</text></view></scroller></view><view wx:else class="_div M8b1809c4 wrap tab-bar"><view class="_div M8b1809c4 tab-bar-item" wx:key="t" key="{{t}}" ref="{{tabBar.id + t}}" bindtap="handleProxy" data-eventid="{{'8b1809c4-1-'+t}}" data-comkey="{{$k}}" wx:for="{{tabBars}}" wx:for-index="t" wx:for-item="tabBar"><text class="_text M8b1809c4 tab-bar-title {{[tabIndex === t ? 'active' : '']}}">{{
+				tabBar.name
+			}}</text></view></view></view></template>

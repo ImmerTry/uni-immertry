@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "量贩库WS",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50
+}

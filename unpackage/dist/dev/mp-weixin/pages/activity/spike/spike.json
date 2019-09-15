@@ -1,0 +1,8 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "限时秒杀",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "backgroundColorTop": "#ffffff",
+  "backgroundColorBottom": "#ffffff"
+}

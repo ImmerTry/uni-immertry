@@ -1,0 +1,8 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "砍价中心",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "backgroundColorTop": "#ffffff",
+  "backgroundColorBottom": "#ffffff"
+}
