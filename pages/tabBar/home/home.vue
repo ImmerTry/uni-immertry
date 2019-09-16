@@ -444,7 +444,7 @@ export default {
 			console.log(e)
 			uni.setStorageSync('catName', e.name);
 			uni.navigateTo({
-				url: '../../activity/assemble/assemble'
+				url: '../../activity/activity'
 			});
 		},
 		// /?cid=' + e.id + '&name=' + e.name

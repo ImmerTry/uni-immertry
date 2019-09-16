@@ -1,10 +1,4 @@
-<import src="/components/uni-tabs/uni-tabs.vue.wxml" />
-<import src="/components/uni-tab-bar/uni-tab-bar.vue.wxml" />
-<import src="/components/uni-tab-content/uni-tab-content.vue.wxml" />
-<import src="/components/uni-media-list/uni-media-list.vue.wxml" />
+<import src="/components/footer-tab/footer-tab.vue.wxml" />
+<import src="/components/wuc-tab/wuc-tab.vue.wxml" />
 <import src="/components/mpvue-citypicker/mpvueCityPicker.vue.wxml" />
-
-<template name="M50a5665c-default-50a5665c-6"><list class="_list M50a5665c list" bindloadmore="handleProxy" loadmoreoffset="10" wx:key="index1" key="{{index1}}" data-eventid="{{'50a5665c-2-'+index1}}" data-comkey="{{$k}}" wx:for="{{newsitems}}" wx:for-index="index1" wx:for-item="tab"><refresh class="_refresh M50a5665c refresh" bindrefresh="handleProxy" bindpullingdown="handleProxy" display="{{refreshing ? 'show' : 'hide'}}" data-eventid="{{'50a5665c-0-'+index1}}" data-comkey="{{$k}}"><text class="_text M50a5665c refresh-text">{{refreshText}}</text></refresh><cell wx:key="index2" key="{{index2}}" wx:for="{{tab.data}}" wx:for-index="index2" wx:for-item="newsitem" class="_cell M50a5665c"><template bindclose="handleProxy" bindtap="handleProxy" data-eventid="{{'50a5665c-1-'+index1+'-'+index2}}" data-comkey="{{$k}}" data="{{...$root['0'], ...$root[$kk+'50a5665c-2-'+index1+'-'+index2],$root}}" is="4c183460"></template></cell><cell class="_cell M50a5665c loadmore"><text class="_text M50a5665c loadmore-text">{{tab.loadingText}}</text></cell></list></template>
-
-<template name="M50a5665c-default-50a5665c-7"><template data="{{...$root['0'], ...$root[$kk+'50a5665c-0'],$root}}" is="8b1809c4"></template><template data="{{...$root['0'], ...$root[$kk+'50a5665c-6'],$root, $slotdefault:'M50a5665c-default-50a5665c-6'}}" is="58a2746a"></template></template>
 

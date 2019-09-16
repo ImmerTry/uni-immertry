@@ -1,49 +1,51 @@
 {
-  "description": "项目配置文件。",
-  "packOptions": {
-    "ignore": []
-  },
-  "setting": {
-    "urlCheck": true,
-    "es6": true
-  },
-  "compileType": "miniprogram",
-  "libVersion": "2.7.0",
-  "appid": "touristappid",
-  "projectname": "量贩库WS",
-  "condition": {
-    "search": {
-      "current": -1,
-      "list": []
-    },
-    "conversation": {
-      "current": -1,
-      "list": []
-    },
-    "game": {
-      "current": -1,
-      "list": []
-    },
-    "miniprogram": {
-      "current": 2,
-      "list": [
-        {
-          "name": "活动中心",
-          "id": 0,
-          "pathName": "pages/activity/activity"
-        },
-        {
-          "name": "限时抢购",
-          "id": 1,
-          "pathName": "pages/activity/spike/spike"
-        },
-        {
-          "id": 2,
-          "name": "pages/activity/spike/spike",
-          "pathName": "pages/activity/spike/spike",
-          "query": ""
-        }
-      ]
-    }
-  }
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.7.0",
+	"appid": "touristappid",
+	"projectname": "量贩库WS",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 2,
+			"list": [
+				{
+					"name": "活动中心",
+					"id": 0,
+					"pathName": "pages/activity/activity"
+				},
+				{
+					"name": "限时抢购",
+					"id": 1,
+					"pathName": "pages/activity/spike/spike"
+				},
+				{
+					"id": 2,
+					"name": "pages/activity/activity",
+					"pathName": "pages/activity/activity",
+					"query": ""
+				}
+			]
+		}
+	}
 }

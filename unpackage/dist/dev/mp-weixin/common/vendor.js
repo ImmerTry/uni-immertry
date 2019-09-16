@@ -1,9 +1,9 @@
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["common/vendor"],{
 
 /***/ 1:
-/*!***********************************************!*\
-  !*** /Users/Super/Downloads/量贩库WS/pages.json ***!
-  \***********************************************/
+/*!*********************************************************!*\
+  !*** /Users/testuser/Downloads/uni-immertry/pages.json ***!
+  \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1672,9 +1672,9 @@ uni$1;exports.default = _default;
 /***/ }),
 
 /***/ 18:
-/*!**********************************************************!*\
-  !*** /Users/Super/Downloads/量贩库WS/common/SDK/amap-wx.js ***!
-  \**********************************************************/
+/*!********************************************************************!*\
+  !*** /Users/testuser/Downloads/uni-immertry/common/SDK/amap-wx.js ***!
+  \********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7334,9 +7334,9 @@ module.exports = g;
 /***/ }),
 
 /***/ 87:
-/*!**********************************************************!*\
-  !*** /Users/Super/Downloads/量贩库WS/common/SDK/md5.min.js ***!
-  \**********************************************************/
+/*!********************************************************************!*\
+  !*** /Users/testuser/Downloads/uni-immertry/common/SDK/md5.min.js ***!
+  \********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
