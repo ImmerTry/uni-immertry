@@ -1,4 +1,1 @@
-<import src="/components/footer-tab/footer-tab.vue.wxml" />
-<import src="/components/wuc-tab/wuc-tab.vue.wxml" />
-<import src="/components/mpvue-citypicker/mpvueCityPicker.vue.wxml" />
 

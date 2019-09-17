@@ -1,7 +1,7 @@
 <template>
 	<view class="activity">
-		<view class="header">Header</view>
-		<swiper :current="TabCur" duration="300" @change="swiperChange">
+		<!-- <view class="header">Header</view> -->
+		<!-- <swiper :current="TabCur" duration="300" @change="swiperChange">
 		  <swiper-item v-for="(item,index) in tabList" :key="index">
 			<div>{{item.name}}</div>
 		  </swiper-item>
@@ -13,16 +13,29 @@
 			:tabCur.sync="TabCur" 
 			@change="tabChange">
 			</footer-tab>
+		</view> -->
+		<view class="content" v-if="activityContent === 'spike'" >
+			<spike></spike>
 		</view>
-		<!-- <view class="footer">
+		<view class="content" v-if="activityContent === 'group'" >
+			<group></group>
+		</view>
+		<view class="content" v-if="activityContent === 'bargain'" >
+			<bargain></bargain>
+		</view>
+		<view class="content" v-if="activityContent === 'trial'" >
+			<trial></trial>
+		</view>
+		
+		<view class="footer">
 			<view class="icons">
 				<view class="box" @tap="spike">
 					<view class="icon-img">
-						<image src="../../static/temp/spike.png" mode=""></image>
-					</vie:class="tabClass" :style="tabStyle"w>
+						<image src="../../static/temp/spike-on.png" mode=""></image>
+					</view>
 					<view class="text">秒杀</view>
 				</view>
-				<view class="box" @tap="toChat">
+				<view class="box" @tap="group">
 					<view class="icon-img">
 						<image src="../../static/temp/group.png" mode=""></image>
 					</view>
@@ -41,12 +54,16 @@
 					<view class="text">试用</view>
 				</view>
 			</view>
-		</view> -->
+		</view>
 	</view>
 </template>
 
 <script>
 import FooterTab from '@/components/footer-tab/footer-tab.vue';
+import spike from './spike/spike.vue';
+import group from './group/group.vue';
+import bargain from './bargain/bargain.vue';
+import trial from './trial/trial.vue';
 	export default {
 		data() {
 			return {
@@ -57,34 +74,43 @@ import FooterTab from '@/components/footer-tab/footer-tab.vue';
 					{id:'4',name:'试用',img:'/static/temp/trial.png'},
 				],
 				TabCur:0,
+				activityContent: 'bargain'
 			}
 		},
 		components:{
-			FooterTab
+			FooterTab,
+			spike,
+			group,
+			bargain,
+			trial
 		},
 		methods: {
 			spike() {
-				uni.navigateTo({
-					url:'./spike/spike'
-				})
+				// uni.navigateTo({
+				// 	url:'./spike/spike'
+				// })
+				this.activityContent = 'spike';
 				console.log("秒杀");
 			},
-			toChat() {
-				uni.navigateTo({
-					url:'./group/group'
-				})
+			group() {
+				// uni.navigateTo({
+				// 	url:'./group/group'
+				// })
+				this.activityContent = 'group';
 				console.log("拼团");
 			},
 			bargain() {
-				uni.navigateTo({
-					url:'./bargain/bargain'
-				})
+				// uni.navigateTo({
+				// 	url:'./bargain/bargain'
+				// })
+				this.activityContent = 'bargain';
 				console.log("砍价");
 			},
 			trial() {
-				uni.navigateTo({
-					url:'./trial/trial'
-				})
+				// uni.navigateTo({
+				// 	url:'./trial/trial'
+				// })
+				this.activityContent = 'trial';
 				console.log("试用");
 			},
 			swiperChange(e) {
@@ -96,7 +122,13 @@ import FooterTab from '@/components/footer-tab/footer-tab.vue';
 
 <style lang="less" scoped>
 	.activity {
+		width: 100%;
+		height: 100vh;
 		background-color: #f3f3f3;
+	}
+	.content {
+		width: 100%;
+		height: 100%;
 	}
 	.tabs {
 		position: fixed;

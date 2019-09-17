@@ -1,6 +1,6 @@
 <template>
   <scroll-view class="wuc-tab" :class="tabClass" :style="tabStyle" scroll-with-animation scroll-x :scroll-left="scrollLeft">
-    <view v-if="!textFlex">
+   <view v-if="useFormat === 'verticalTitle'">
       <view class="wuc-tab-item" :class="[index === tabCur ? selectClass + ' cur':'']" v-for="(item,index) in tabList" :key="index" :id="index" @tap="tabSelect(index,$event)">
         <view :class="item.icon"></view>
         <view class="time">{{ item.name }}</view>
@@ -8,20 +8,28 @@
       </view>
     </view>
 
-    <view class="flex text-center" v-if="textFlex">
+    <view class="flex text-center" v-if="useFormat === 'horizontalTitle'">
       <view class="wuc-tab-item flex-sub" :class="index === tabCur ? selectClass + ' cur':''" v-for="(item,index) in tabList" :key="index" :id="index" @tap="tabSelect(index,$event)">
         <view :class="item.icon"></view>
         <view class="time">{{item.name}}</view>
 		<view class="status">{{ item.status }}</view>
       </view>
     </view>
+	<view class="flex text-center" v-if="useFormat === 'onlyTitle'">
+	  <view class="wuc-tab-item flex-sub" :class="index === tabCur ? selectClass + ' cur':''" v-for="(item,index) in tabList" :key="index" :id="index" @tap="tabSelect(index,$event)">
+	    <view class="time">{{item.name}}</view>
+	  </view>
+	</view>
+	</view>
   </scroll-view>
 </template>
 <script>
 export default {
     name: 'wuc-tab',
     data() {
-        return {};
+        return {
+			title:''
+		};
     },
     props: {
         tabList: {
@@ -48,18 +56,18 @@ export default {
                 return '';
             }
         },
-        textFlex: {
-            type: Boolean,
-            default() {
-                return false;
-            }
-        },
         selectClass: {
             type: String,
             default() {
                 return 'text-blue';
             }
-        }
+        },
+		useFormat: {
+			type: String,
+			default() {
+			    return '';
+			}
+		}
     },
     methods: {
         tabSelect(index, e) {
@@ -116,7 +124,7 @@ swiper {
 }
 .wuc-tab-item.cur {
 	/* border: 4rpx solid #FFFFFF; */
-	border-bottom: 4rpx solid #FFFFFF;
+	/* border-bottom: 4rpx solid #FFFFFF; */
 	opacity: 1;
 }
 

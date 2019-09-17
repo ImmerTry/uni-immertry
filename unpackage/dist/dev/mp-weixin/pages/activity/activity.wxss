@@ -68,7 +68,13 @@
 }
 
 .activity.data-v-067fa068 {
+  width: 100%;
+  height: 100vh;
   background-color: #f3f3f3;
+}
+.content.data-v-067fa068 {
+  width: 100%;
+  height: 100%;
 }
 .tabs.data-v-067fa068 {
   position: fixed;
